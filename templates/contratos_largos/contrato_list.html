@@ -1,0 +1,585 @@
+{% extends "base/base.html" %}
+{% load crispy_forms_tags %}
+{% load widget_tweaks %}
+{% block title %} Reporte Contratos {% endblock title %}
+{% block stylesheets %}
+    {{ block.super }
+    <style>
+    table {
+    background-color: white;
+    text-align: center;
+    border-collapse: collapse;
+    width: 100px;
+    }
+
+    th, td {
+    padding: 1px;
+    }
+
+    thead {
+    background-color: #41719C;
+    border-bottom: solid 5px #F362D;;
+    color: white;
+    }
+
+    tfoot {
+    background-color: #41719C;
+    color: #fff;
+    }
+
+    tr:nth-child(even) {
+    background-color: #ddd;
+    }
+
+    /*tbody tr:hover td{
+    background-color: #8adb3e;
+    color: #28394d;
+    }*/
+    #buscar {
+    color: white;
+    }
+    </style>
+    <style>
+    :after, :before {
+    box-sizing: border-box;
+    }
+
+    a {
+    color: #337ab7;
+    text-decoration: none;
+    }
+
+    i {
+    margin-bottom: 4px;
+    }
+
+    #center {
+    font-size: 13px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    }
+
+    .btn {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    }
+
+    .btn-app {
+    color: white;
+    box-shadow: none;
+    border-radius: 3px;
+    position: relative;
+    padding: 10px 15px;
+    margin: 0;
+    min-width: 60px;
+    max-width: 80px;
+    text-align: center;
+    border: 1px solid #ddd;
+    background-color: #f4f4f4;
+    font-size: 12px;
+    transition: all .2s;
+    background-color: steelblue !important;
+    }
+
+    .btn-app > .fa, .btn-app > .glyphicon, .btn-app > .ion {
+    font-size: 30px;
+    display: block;
+    }
+
+    .btn-app:hover {
+    border-color: #aaa;
+    transform: scale(1.1);
+    }
+
+    .glyphicon.glyphicon-save-file {
+    font-size: 35px;
+    }
+
+    .selectTable {
+    height: 40px;
+    float: right;
+    }
+
+    div.dataTables_wrapper div.dataTables_filter {
+    text-align: left;
+    margin-top: 15px;
+    }
+
+    .btn-secondary {
+    color: #fff;
+    background-color: #4682b4;
+    border-color: #4682b4;
+    }
+
+    .btn-secondary:hover {
+    color: #fff;
+    background-color: #315f86;
+    border-color: #545b62;
+    }
+
+    .titulo-tabla {
+    color: #606263;
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    }
+
+    .inline {
+    display: inline-block;
+    padding: 0;
+    }
+
+    .dropdown-menu a:hover {
+    background-color: #ddd;
+    }
+
+    table.center-all td, th {
+    text-align: center;
+    }
+
+
+    </style>
+    <style>
+    #oculto {
+    visibility: hidden
+    }
+
+    ;
+    </style>
+{% endblock stylesheets %}
+{% block content %}
+    <div class="right_col" role="main">
+        <div class="">
+            <div class="row">
+                <div class="col-md-4 col-sm-offset-8">
+                    {% if messages %}
+                        <ul class="message">
+
+                            {% for message in messages %}
+                                <div style="text-align: center"
+                                     class="alert alert-success {{ message.tags }} alert-dismissible" role="alert">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                        <a href="#" class="del-msg">&times;</a>
+                                    </button>
+                                    {{ message }}
+
+                                </div>
+                            {% endfor %}
+
+
+                        </ul>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="page-title">
+                <div class="title_right">
+                    <h3>Gobierno Autonomo Departamental de Potosi </h3>
+                </div>
+            </div>
+
+            <div class="row"><p>
+
+
+            </p>
+                <div id="accordion">
+                </div>
+                <div class="x_panel">
+                    <div class="x_title">
+                        <!-- Button trigger modal -->
+                        <button onload="miFuncion();" id="pageDemo2" type="button" class="btn btn-primary collapsed"
+                                data-toggle="modal" data-target="#myModal">
+
+                            <i class="fa fa-search-plus"></i>Buscar Registro
+                            <span class="caret" style="color: white"></span>
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                             aria-hidden="true">
+                            <div class="modal-dialog" style="width: 50% !important;">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span></button>
+                                        <h4 class="modal-title" id="myModalLabel">Filtros para Reportes</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12" {% if error %}
+                                             style="display:block" {% else %} style="display: none" {% endif %}>
+                                            <div class="alert"
+                                                 style="background-color: rgba(255, 222, 222, 0.88);border-top: solid 3px rgba(255, 0, 0, 0.88)">
+                                                <p style="color: black;" class="error">{{ error }}</p>
+                                            </div>
+                                        </div>
+
+                                        <form action="/contratolargo/buscarClas" method="get"
+                                              onsubmit="return validarFecha()">
+                                            <div class="container">
+
+                                                <div class="row">
+                                                    {% if user.is_authenticated %}
+                                                        {% if perms.contratos_largos.FiltroLIc %}
+
+                                                            <div>
+
+                                                                <div class="panel panel-default">
+                                                                    <div class="panel-thumbnail"></div>
+
+                                                                    <div class="panel-body">
+                                                                        <div class='col-sm-4'>
+                                                                            <div class="form-group">
+                                                                                <label for="exampleInputEmail1">Fecha
+                                                                                    Inicial</label>
+                                                                                <div class='input-group'
+                                                                                     id="datetimepicker6">
+                                                                                    <input name="fecha_ini"
+                                                                                           autocomplete="off"
+                                                                                           class="form-control "
+                                                                                           value="{{ fecha_ini }}">
+                                                                                    <span class="input-group-addon">
+                                                                            <span class="glyphicon glyphicon-calendar"
+                                                                                  style="color:black"></span>
+                                                                        </span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class='col-xs-4'>
+                                                                            <div class="form-group">
+                                                                                <label for="exampleInputEmail1">Fecha
+                                                                                    Final</label>
+                                                                                <div class='input-group'
+                                                                                     id="datetimepicker7">
+                                                                                    <input name="fecha_fini"
+                                                                                           autocomplete="off"
+                                                                                           class="form-control "
+                                                                                           value="{{ fecha_final }}">
+                                                                                    <span class="input-group-addon">
+                                                                            <span class="glyphicon glyphicon-calendar"
+                                                                                  style="color: black"></span>
+                                                                        </span>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+
+                                                                        <div class='col-sm-4'>
+                                                                            <div class="form-group">
+                                                                                <label for="exampleInputEmail1">Lugar</label>
+                                                                                <div class='input-group'>
+                                                                                    <select class="form-control"
+                                                                                            name="lugar" id="">
+                                                                                        {% for l in Lugar %}
+
+                                                                                            <option value="{{ l.id }}">{{ l.descripcion }}</option>
+                                                                                        {% endfor %}
+                                                                                    </select>
+                                                                                    <span class="input-group-addon">
+                                                                                    <span class="glyphicon glyphicon-list"
+                                                                                          style="color:black"></span>
+                                                                            </span>
+                                                                                </div>
+                                                                                <!--{{Lugar}}-->
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                </div>
+
+
+                                                            </div><!--/col-->
+                                                        {% endif %}
+                                                    {% endif %}
+                                                    <!--
+                                                <div class="col-sm-5 col-xs-6">
+                                                
+                                                    <div class="panel panel-default">
+                                                    <div class="panel-thumbnail"></div>
+                                                    <div class="panel-title" style="text-align: center">Filtro Buscar Registro</div>
+                                                    <div class="panel-body">
+                                                        <div class='col-sm-6'>
+                                                                <div class="form-group">
+                                                                    <label for="exampleInputEmail1">Nro Factura</label>
+                                                                    <input type="number" id="numero_fac"name="num_fact"  min="0" pattern="^[0-9]+" class="form-control" placeholder="">  
+                                                                </div>
+                                                        </div>
+                                                        <div class='col-sm-6'>
+                                                                <div class="form-group">
+                                                                    <label for="exampleInputEmail1">DNI/NIT</label>
+                                                                    <input type="number" id="cedulaidentidad" value="{{ci}}" name="cedula" class="form-control" placeholder="">  
+                                                                </div>
+                                                            </div> 
+                                                    </div>
+                                                </div>
+                                                </div>-->
+                                                </div>
+                                            </div>
+
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <div style="display: flex; ">
+                                            <button type="submit" class="btn btn-success"><span style="color:white"
+                                                                                                class="glyphicon glyphicon-search"></span>
+                                                Buscar
+                                            </button>
+                                        </div>
+                                    </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Reportes con Reportlab-->
+                        {% if filter|length > 0 %}
+                            <!--Solo lugares-->
+                            {% if lugar_reuqest and not fecha_ini and not fecha_final %}
+
+                                <div class="col-md-2" style="float:right;  ">
+                                    <div class="btn-group">
+                                        <a target="_blank" data-toggle="tooltip" title="Imprimir"
+                                           href="{% url 'contratolargo:reporte_anual_operador' lugar_reuqest None None %}"
+                                           class="btn btn-sm btn-danger"> <i class="glyphicon glyphicon-export"></i>
+                                            Reporte PDF </a>
+                                    </div>
+                                </div>
+                            {% endif %}
+                            <!--solo fecha final y fecha inicial-->
+                            {% if not lugar_reuqest and fecha_ini and fecha_final %}
+                                <div class="col-md-2" style="float:right; ">
+                                    <div class="btn-group">
+                                        <a target="_blank" data-toggle="tooltip" title="Imprimir"
+                                           href="{% url 'contratolargo:reporte_anual_operador' None fecha_ini fecha_final %}"
+                                           class="btn btn-sm btn-danger"> <i class="glyphicon glyphicon-export"></i>
+                                            Reporte PDF </a>
+                                    </div>
+                                </div>
+                            {% endif %}
+                            <!--solo lugar , fecha inicial y fecha final-->
+                            {% if lugar_reuqest and fecha_ini and fecha_final %}
+                                <div class="col-md-2" style="float:right;">
+                                    <div class="btn-group">
+                                        <a target="_blank" data-toggle="tooltip" title="Imprimir"
+                                           href="{% url 'contratolargo:reporte_anual_operador' lugar_reuqest fecha_ini fecha_final %}"
+                                           class="btn btn-sm btn-danger"> <i class="glyphicon glyphicon-export"></i>
+                                            Reporte PDF </a>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endif %}
+
+                    </div>
+                    <ul class="nav navbar-right panel_toolbox">
+                    </ul>
+                    <div class="clearfix"></div>
+
+                    <div class="clearfix"></div>
+                    <div class="row">
+                        <div class="x_content">
+                            <div class="table-responsive">
+                                <div class="col-md-12 col-sm-12 col-xs-12"></div>
+                                <table align="center" border="1" height=60 width="100%" id="datatable"
+                                       class="table table-striped jambo_table bulk_action table-bordered center-all ">
+                                    <thead>
+                                    <tr>
+                                        <th id="center">N°
+                                        </td>
+                                        <td id="center">Nombre</td>
+                                        <td id="center">Dni/Nit</td>
+                                        <th id="center">Fecha Inicial</th>
+                                        <th id="center">Fecha Final</th>
+                                        <th id="center">Fecha Deposito</th>
+                                        <th id="center">Monto Total</th>
+                                        <th id="center">Monto Depositado</th>
+                                        <th id="center">Monto Faltante</th>
+                                        <th id="center">Estado</th>
+                                        <th id="center">Nombre Actividad</th>
+                                        <th id="center">Numero Factura</th>
+                                        <th id="center">Numero Deposito</th>
+                                        <th id="center">Lugar</th>
+                                        <th id="center">Espacio</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody id="tags1">
+                                    {% if filter %}
+                                        {% for contratolargolistar in filter %}
+
+                                            <tr style="vertical-align: middle;">
+                                                <td id="center">{{ forloop.counter }}</td>
+                                                <td id="center">{{ contratolargolistar.nombre }}</td>
+                                                <td id="center">{{ contratolargolistar.dni_nit }}</td>
+                                                <td id="center">{{ contratolargolistar.fecha_inicial |date:"d/m/Y h:i a" }}</td>
+                                                <td id="center">{{ contratolargolistar.fecha_final |date:"d/m/Y h:i a" }}</td>
+                                                <td id="center">{{ contratolargolistar.fecha_deposito |date:"d/m/Y h:i a" }} </td>
+                                                <td id="center">{{ contratolargolistar.monto_total }}.bs</td>
+                                                <td id="center">{{ contratolargolistar.monto_depositado }}.bs</td>
+                                                <td id="center">{{ contratolargolistar.monto_faltante }}.bs</td>
+                                                {% if contratolargolistar.estado %}
+                                                    <td id="center">
+                                                        <div class="dropdown">
+                                                            <button class="badge bg-red  dropdown-toggle" type="button"
+                                                                    data-toggle="dropdown" style="font-size: 9px"
+                                                                    disabled>Activo
+                                                                <span class="caret"></span></button>
+                                                            <ul class="dropdown-menu">
+                                                                <li><a style="font-size: 10px"
+                                                                       href="{% url 'contratolargo:modificar' contratolargolistar.id %}">Pagar<span
+                                                                        style="color: white"
+                                                                        class="badge bg-blue-sky">{{ contratolargolistar.diastotales }}</span></a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </td>
+                                                {% else %}
+                                                    <td id="center"><span style="color: white;font-size: 9px"
+                                                                          class="badge bg-info">Inactivo</span></td>
+                                                {% endif %}
+                                                <td id="center">{{ contratolargolistar.nombre_completo_actividad }}</td>
+                                                <td id="center">{{ contratolargolistar.numero_factura }} </td>
+                                                <td id="center">{{ contratolargolistar.numero_deposito }} </td>
+                                                <td id="center">{{ contratolargolistar.lugar_name }}</td>
+                                                <td id="center">{{ contratolargolistar.espacio_name }}</td>
+
+                                            </tr>
+
+                                        {% endfor %}
+                                    {% else %}
+                                        <h3 style="text-align: center">No hay registros </h1>
+                                        <div class="col-md-10 col-md-offset-1 col-sm-12 col-xs-12" {% if error %}
+                                             style="display:block" {% else %} style="display: none" {% endif %}>
+                                            <div class="alert"
+                                                 style="background-color: rgba(255, 222, 222, 0.88);border-top: solid 3px rgba(255, 0, 0, 0.88)">
+                                                <p style="color: black;" class="error">{{ error }}</p>
+                                            </div>
+                                        </div>
+
+                                    {% endif %}
+                                    </tbody>
+                                    <div id="popup" class="modal fade" role="dialog">
+                                    </div>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </p>
+        </div>
+    </div>
+    </div>
+
+    </div>
+
+{% endblock content %}
+
+{% block javascripts %}
+    {{ block.super }}
+    <!-- Datatables -->
+    <!--<script src="/static/vendors/datatables.net/js/jquery.dataTables.min.js"></script>-->
+    <script src="/static/vendors/js/moment.js"></script>
+    <!-- <script src="/static/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>-->
+    <!--<script src="/static/vendors/js/datetime-moment.js"></script>-->
+    <!--<script src="/static/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+    <script src="/static/vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>-->
+
+    <!--<script src="/static/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+    <script src="/static/vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+    <script src="/static/vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="/static/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+    <script src="/static/vendors/datatables.net-scroller/js/dataTables.scroller.min.js"></script>
+    <script src='https://cdn.datatables.net/buttons/1.5.2/js/buttons.bootstrap4.min.js'></script>-->
+    <!-- <script src="/static/vendors/js/pdfmake.min.js"></script>-->
+    <!--<script>
+        $(document).ready(function(){
+            $('#datatable').each('.sumar',function(i){
+                alert($(this).text());
+            })
+        });
+    </script>-->
+
+    <!--<script src="/static/images/gobierno.png"></script>-->
+    <!--<script>
+    $(document).ready(function() {
+        $('#datatable').DataTable( {
+         "searching": false,
+         "ordering": false,
+         "scrollX": true,
+         "bFilter" : false,
+         "bLengthChange": false,
+         "language": {
+                 "url": "/static/vendors/Spanish.json"
+             },
+         dom: 'Bfrtip',
+     });
+//LLAVE principal
+});
+</script>-->
+    <script>
+
+        $('#datatable').DataTable({
+            "searching": false,
+            "paging": true,
+            "ordering": false,
+            "info": false,
+            "bFilter": false,
+            "bLengthChange": false,
+            language: {
+                "decimal": "",
+                "emptyTable": "No hay información",
+                "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
+                "infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
+                "infoFiltered": "(Filtrado de _MAX_ total entradas)",
+                "infoPostFix": "",
+                "thousands": ",",
+                "lengthMenu": "Mostrar _MENU_ Entradas",
+                "loadingRecords": "Cargando...",
+                "processing": "Procesando...",
+                "search": "Buscar:",
+                "zeroRecords": "Sin resultados encontrados",
+                "paginate": {
+                    "first": "Primero",
+                    "last": "Ultimo",
+                    "next": "Siguiente",
+                    "previous": "Anterior"
+                }
+            },
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            // messages timeout for 3 sec 
+            setTimeout(function () {
+                $('.message').fadeOut('slow');
+            }, 3000); // <-- time in milliseconds, 1000 =  1 sec
+        });
+    </script>
+
+    <script>
+        function validarFecha() {
+            var fecha_ini = document.getElementById("id_fecha_inicial");
+            var fecha_fin = document.getElementById("id_fecha_final");
+            /*if(fecha_fin > fecha_ini ){
+                alert("La fecha final debe ser mayor a la fecha inicial");
+            }*/
+            return true;
+        }
+
+        $('#myModal').on('shown.bs.modal', function () {
+            $('#myInput').focus()
+            $('#preload').click(function () {
+                $.blockUI({message: '<h><img style="width: 60; height: 60;z-index: 900;" src="/static/images/loading.gif" /> Espere un momento...</h>'});
+                test();
+            });
+        })
+    </script>
+{% endblock javascripts %}

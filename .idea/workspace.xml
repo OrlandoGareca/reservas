@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="6ce4a090-3843-4bc0-bbed-e13ee46ba7ac" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.vscode/settings.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/admin/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/admin/admin.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/admin/apps.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/admin/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/admin/migrations/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/admin/models.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/admin/tests.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/admin/urls.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/admin/views.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/contratos_largos/123.code-workspace" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/contratos_largos/BaseReport.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/contratos_largos/migrations/0002_auto_20190625_1132.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/contratos_largos/migrations/0003_auto_20190726_1012.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/contratos_largos/migrations/0004_auto_20190823_1002.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/contratos_largos/migrations/0005_auto_20190827_1250.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/contratos_largos/migrations/0006_auto_20190827_1353.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/escudo_gober.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/escudo_potosi.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/pre.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/preload.gif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/vendors/blockUI/jquery.blockUI.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/vendors/js/paginator.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/vendors/tablas/jquery.dataTables.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/vendors/tablas/jquery.dataTables.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/employee/add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/employee/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/employee/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/employee/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/promedio/add.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/promedio/delete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/promedio/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/promedio/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/contratos_largos/ajax.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/contratos_largos/ajax.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/contratos_largos/filters.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/contratos_largos/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/contratos_largos/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/contratos_largos/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/contratos_largos/migrations/0001_initial.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/contratos_largos/migrations/0002_remove_lugar_personal.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/contratos_largos/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/contratos_largos/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/contratos_largos/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/contratos_largos/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/contratos_largos/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/contratos_largos/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/usuario/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuario/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/usuario/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/usuario/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requeriment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requeriment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reservas/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/reservas/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/reservas/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/reservas/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/bg1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/images/log3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendors/Spanish.json" beforeDir="false" afterPath="$PROJECT_DIR$/static/vendors/tablas/Spanish.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendors/css/fondo.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/vendors/css/fondo.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendors/datatables.net-bs/css/dataTables.bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendors/datatables.net-bs/js/dataTables.bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendors/datatables.net-buttons/js/buttons.colVis.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendors/datatables.net-buttons/js/buttons.colVis.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendors/datatables.net-buttons/js/buttons.flash.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendors/datatables.net-buttons/js/buttons.flash.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendors/datatables.net-buttons/js/buttons.html5.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendors/datatables.net-buttons/js/buttons.html5.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendors/datatables.net-buttons/js/buttons.print.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendors/datatables.net-buttons/js/buttons.print.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendors/datatables.net-buttons/js/dataTables.buttons.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendors/datatables.net-buttons/js/dataTables.buttons.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendors/datatables.net-keytable/js/dataTables.keyTable.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendors/datatables.net-keytable/js/dataTables.keyTable.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendors/datatables.net-responsive/js/dataTables.responsive.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendors/datatables.net-responsive/js/dataTables.responsive.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendors/datatables.net-scroller-bs/.bower.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendors/datatables.net-scroller-bs/License.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendors/datatables.net-scroller-bs/Readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendors/datatables.net-scroller-bs/bower.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendors/datatables.net-scroller/.bower.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendors/datatables.net-scroller/License.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendors/datatables.net-scroller/Readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendors/datatables.net-scroller/bower.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendors/datatables.net-scroller/js/dataTables.scroller.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendors/datatables.net-scroller/js/dataTables.scroller.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendors/datetimepicker-jquery/jquery.datetimepicker.full.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendors/datetimepicker-jquery/jquery.datetimepicker.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendors/datetimepicker-jquery/jquery.datetimepicker.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/vendors/datetimepicker-jquery/jquery.validate.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base/sidebar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base/sidebar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base/top_navigation.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base/top_navigation.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contratos_largos/contrato_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contratos_largos/contrato_delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contratos_largos/contrato_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contratos_largos/contrato_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contratos_largos/contrato_formcort.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contratos_largos/contrato_formcort.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contratos_largos/contrato_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contratos_largos/contrato_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contratos_largos/contrato_list_user.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contratos_largos/contrato_list_user.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contratos_largos/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contratos_largos/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contratos_largos/modal.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contratos_largos/modal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contratos_largos/modificar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contratos_largos/modificar.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contratos_largos/modificarcor.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contratos_largos/modificarcor.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/contratos_largos/principal.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/contratos_largos/principal.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/usuario/actualizar_usuario.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/usuario/actualizar_usuario.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/usuario/registrar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/usuario/registrar.html" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="sistema_de_reservas" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1hKZpHrSMgWhU3q9WYaMguAy1dp" />
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Orlando\Desktop\reservas\static\vendors\js" />
+      <recent name="C:\Users\Orlando\Desktop\refugio\static\vendors\font-awesome\css" />
+      <recent name="C:\Users\Orlando\Desktop\refugio\static\vendors\css" />
+      <recent name="C:\Users\Orlando\Desktop\refugio\static\vendors\js" />
+      <recent name="C:\Users\Orlando\Desktop\refugio\static\vendors" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Orlando\Desktop\reservas\static\vendors\fuenteCss" />
+      <recent name="C:\Users\Orlando\Desktop\reservas\static\vendors\fonts" />
+      <recent name="C:\Users\Orlando\Desktop\reservas\static\vendors\font-awesome" />
+      <recent name="C:\Users\Orlando\Desktop\reservas\static\vendors\js" />
+      <recent name="C:\Users\Orlando\Desktop\reservas\static\vendors\css" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="reservas" type="Python.DjangoServer" factoryName="Django server">
+      <module name="sistema_de_reservas" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+        <env name="DJANGO_SETTINGS_MODULE" value="refugio.settings" />
+      </envs>
+      <option name="SDK_HOME" value="E:\workspace\project_django\djangorest_almuerzi\venv\Scripts\python.exe" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6ce4a090-3843-4bc0-bbed-e13ee46ba7ac" name="Default" comment="" />
+      <created>1538663678808</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1538663678808</updated>
+      <workItem from="1599761937014" duration="1508000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/apps/contratos_cortos/views.py</url>
+          <line>88</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/apps/select2/ajax.py</url>
+          <line>21</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/apps/mascota/forms.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/apps/mascota/views.py</url>
+          <line>9</line>
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/apps/contratos_largos/models.py</url>
+          <line>61</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/apps/contratos_largos/forms.py</url>
+          <line>250</line>
+          <option name="timeStamp" value="25" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="django-line">
+          <url>file://$PROJECT_DIR$/templates/base/base.html</url>
+          <line>4</line>
+          <option name="timeStamp" value="26" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
